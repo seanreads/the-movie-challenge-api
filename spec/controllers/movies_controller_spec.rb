@@ -14,4 +14,19 @@ RSpec.describe MoviesController, type: :controller do
     end
   end
 
+  describe "GET #show" do
+
+    let (:movie_id) { 1 }
+
+    it "requests an individual movie with api_key" do
+      get :show, params: { id: movie_id }
+      expect(WebMock).to have_requested(:get, "#{ENV['THE_MOVIE_DB_API']}/movie/#{movie_id}")
+        .with(query: {'api_key': ENV['THE_MOVIE_DB_API_KEY']})
+    end
+    it "returns http success" do
+      get :show, params: { id: movie_id }
+      expect(response).to have_http_status(:success)
+    end
+  end
+
 end
