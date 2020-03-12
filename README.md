@@ -8,7 +8,7 @@ To run this API in development...
 ```sh
 git clone git@github.com:seanreads/the-movie-challenge-api.git api
 cd api
-cp .env.example .env    # Copy the example to .env and update it with your key
+cp .env.example .env    # Copy the example to a file named .env, then edit that file to use your key
 ```
 
 Run it:
