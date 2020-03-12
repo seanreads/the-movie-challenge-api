@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To run this API in development...
 
-Things you may want to cover:
+1. Get an API (v3) key from https://www.themoviedb.org/settings/api
+2. Clone the repo and add your key to the environment file.
 
-* Ruby version
+```sh
+git clone git@github.com:seanreads/the-movie-challenge-api.git api
+cd api
+cp .env.example .env    # Copy the example to .env and update it with your key
+```
 
-* System dependencies
+Run it:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+bundle 
+rails s
+```
