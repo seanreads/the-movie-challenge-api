@@ -17,3 +17,5 @@ Run it:
 bundle 
 rails s
 ```
+
+You can find the front-end react app here: https://github.com/seanreads/the-movie-challenge-web
